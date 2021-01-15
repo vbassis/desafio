@@ -1,0 +1,23 @@
+---
+  - name: Istalar Docker
+    shell: "{{ item }}"
+    with_items: "{{ dados }}"
+
+
+  - name: Copiar Arquivos Docker
+    copy:
+      src: docker-files
+      dest: /opt/docker-files
+      owner: ubuntu
+      group: ubuntu
+      mode: 0777
+
+  - name: Deploy docker compose
+    docker_compose:
+    project_src: /opt/files
+    files:
+    - docker-compose.yml
+    
+
+
+# tasks file for docker

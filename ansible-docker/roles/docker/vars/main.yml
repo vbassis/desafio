@@ -1,0 +1,6 @@
+---
+dados:
+  - apt-get update
+  - curl -fsSL https://get.docker.com | bash
+  - apt-get intall docker-compose -y
+# vars file for docker

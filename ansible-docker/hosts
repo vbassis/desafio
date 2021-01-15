@@ -1,0 +1,2 @@
+[DOCKER]
+172.16.2.33 ansible_user=ubuntu
